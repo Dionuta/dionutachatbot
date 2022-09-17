@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!--Analyst path-->
+    <category>
+        <pattern>ANALYTICAL1</pattern>
+        <template>Would you describe yourself as someone who likes
+        finding unknown threats?
+            <button>
+                <text>Yes</text>
+                <postback>ANAQUSYES2</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>NOAN1</postback>
+            </button>
+        </template>
+    </category>
+    
+    <!--No to ANALYTICAL1-->
+    <category>
+        <pattern>NOAN1</pattern>
+        <template>This path might not be the right fit for you. 
+        Finding threats is a big part of being an Analyst.</template>
+    </category>
+    
+    <!-- Yes to ANALYTICAL1-->
+    <category>
+        
+        <pattern>ANAQUSYES2</pattern>
+        <template>Are you interested in finding criminals?
+        <button>
+            <text>Yes</text>
+            <postback>Forensic</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>Application</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Forensic</pattern>
+        <template> We think you will find the world of 
+        Forensic Bomputer Analytics interesting. 
+        Please check out the link below to learn more:
+            <button>
+                <text>Information</text>
+                <url>https://careerkarma.com/blog/how-to-become-a-forensic-computer-analyst/</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Application</pattern>
+        <template>We think you will find the world of Application analytics fascinating. 
+        Please check out the link below to learn more:
+        <button>
+            <text>Information</text>
+            <url>https://www.indeed.com/career-advice/finding-a-job/application-analyst</url>
+        </button>
+        </template>
+    </category>
+</aiml>

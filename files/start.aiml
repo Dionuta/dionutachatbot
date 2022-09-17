@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <!-- This is the beginning of the conversation between the user and AI. -->
+    <category>
+        
+        <!-- Anyting can be enter to start coversation-->
+        <pattern> * </pattern>
+        
+        <!-- learn if student is a CS Major-->
+        <template>Hello, welcome to WGU'S Computer Science Career Advisor.
+        Are you currently studying Computer Science?
+         <reply>
+            <text>Yes</text>
+            <postback>CSMAJOR</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOTCS</postback>
+        </reply>
+        </template>
+        
+    </category>
+    
+    
+    <!-- If student is not a CS major-->
+    <category>
+        <pattern>NOTCS </pattern>
+        <template>Sorry, please check back at a later time.
+        We strive to help all students one day.</template>
+    </category>
+    
+    <!--If student is a CS Major-->
+    <category>
+        
+        <!--Start of questions to narrow down career-->
+        <pattern>CSMAJOR</pattern>
+        <template>Fantastic, we hope your studies are going well. 
+        Please take some time to answer a few questions so we can assist you better. 
+        How would you describe yourself?
+        <button>
+            <text>Analyst</text>
+            <postback>ANALYTICAL1</postback>
+        </button>
+        <button>
+            <text>Designer</text>
+            <postback>desqus1</postback>
+        </button>
+        <button>
+            <text>Builder</text>
+            <postback>BUILDER1</postback>
+        </button>
+        </template>
+    </category>
+    
+
+    
+    
+</aiml>

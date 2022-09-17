@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<!--Desinger Path-->
+	<category>
+	    <pattern>desqus1</pattern>
+	       <!--Question 1-->
+	    <template>Do you like bringing ideas into reality?
+	    <button>
+	        <text>Yes</text>
+	        <postback>yes1</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>no1</postback>
+        </button>
+	    </template>
+    </category>
+    
+    <!--Question 1 No-->
+    <category>
+        <pattern>no1</pattern>
+        <template>Please reconsider your choice because that is a massive part 
+        of the design path.</template>
+    </category>
+    
+      <!--Question 1 yes-->
+      
+    <category>
+        <pattern>yes1</pattern>
+           <!--Question 2-->
+        <template>Do you like video games?
+        <button>
+            <text>Yes</text>
+            <postback>desyes2</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>desno2</postback>
+        </button>
+        </template>
+    </category>
+    
+       <!--Question 2 yes-->
+    <category>
+        <pattern>desyes2</pattern>
+        <template> We think you will find the world of game design fascinating.
+        Please check out the link below to learn more:
+            <button>
+                <text>Infromation</text>
+                <url>https://www.careerexplorer.com/careers/video-game-designer/</url>
+            </button>
+        </template>
+    </category>
+    
+    <!--Question 2 yes-->
+    <category>
+        <pattern>desno2</pattern>
+        <template> We think you will find the world of UX design fascinating.
+        Please check out the link below to learn more:
+            <button>
+                <text>Infromation</text>
+                <url>https://careerfoundry.com/en/blog/ux-design/what-does-a-ux-designer-actually-do/</url>
+            </button>
+        </template>
+    </category>
+    
+    
+</aiml>
